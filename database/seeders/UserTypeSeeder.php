@@ -15,10 +15,12 @@ class UserTypeSeeder extends Seeder
     {
         $data = [
             [
-                'name' => 'Admin'
+                'name' => 'Admin',
+                'permissions' => '{"users.view" : "1","users.create" : "1","users.edit":"1","users.delete" : "1", "permissions.view" : "1","permissions.edit" : "1", "slider.view" : "1", "slider.create" : "1", "slider.edit" : "1", "slider.delete" : "1", "faq.view" : "1", "faq.create" : "1", "faq.edit" : "1", "faq.delete" : "1", "announcement.view" : "1", "announcement.create" : "1", "announcement.edit" : "1", "announcement.delete" : "1"}'
             ],
             [
-                'name' => 'User'
+                'name' => 'User',
+                'permissions' => '{"users.view" : "1","users.create" : "1","users.edit":"1","users.delete" : "1", "permissions.view" : "1","permissions.edit" : "1", "slider.view" : "1", "slider.create" : "1", "slider.edit" : "1", "slider.delete" : "1", "faq.view" : "1", "faq.create" : "1", "faq.edit" : "1", "faq.delete" : "1", "announcement.view" : "1", "announcement.create" : "1", "announcement.edit" : "1", "announcement.delete" : "1"}'
             ]
         ];
 

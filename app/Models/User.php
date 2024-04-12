@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'user_type_id',
+        'last_active'
     ];
 
     /**
@@ -43,12 +45,14 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    protected $appends = [
-        'full_name'
-    ];
-    public function getFullNameAttribute()
+
+    public function usertype(){
+        return $this->hasOne(UserType::class,'id','user_type_id');
+    }
+
+    public function isOnline()
     {
-        return $this->first_name . ' ' . $this->last_name;
+        return $this->last_active >= now()->subMinutes(5);
     }
 
 }

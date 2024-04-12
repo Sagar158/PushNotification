@@ -112,7 +112,7 @@
                             <li class="nav-item">
                                 <form action="{{ route('logout') }}" method="POST">
                                     @csrf
-                                    <button type="submit" href="javascript:;" class="nav-link">
+                                    <button type="submit" href="javascript:void(0);" class="btn p-0">
                                         <i data-feather="log-out"></i>
                                         <span>Log Out</span>
                                     </button>
